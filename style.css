@@ -321,10 +321,12 @@ section {
   width: 600px;
 }
 
-.arrow {
+.arrow i {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+  color:#E3651D;
+  font-size: 25px;
 }
 
 .details-container {
