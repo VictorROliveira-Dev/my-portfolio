@@ -1,6 +1,6 @@
 /* GENERAL */
 
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
 
 * {
   margin: 0;
@@ -91,7 +91,6 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
-
 }
 
 .hamburger-icon span {
@@ -200,7 +199,7 @@ section {
 
 .text-container p {
   font-weight: 900;
-  color: #9DB2BF;
+  color: #9db2bf;
 }
 
 .section__text__p1 {
@@ -214,10 +213,20 @@ section {
   margin-bottom: 1rem;
 }
 
+.section__intro {
+  display: inline-block;
+  font-size: 1.4rem;
+  border-right: 4px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animaMarcador steps(13) 2s, animaTexto 0.75s step-end infinite,
+    remove-bar 0s 2.6s forwards;
+}
+
 .title {
   font-size: 3rem;
   text-align: center;
-  color: #E3651D;
+  color: #e3651d;
 }
 
 #socials-container {
@@ -228,7 +237,7 @@ section {
 }
 
 #socials-container .social-icon {
-  color: #E3651D;
+  color: #e3651d;
   font-size: 30px;
 }
 
@@ -325,7 +334,7 @@ section {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
-  color:#E3651D;
+  color: #e3651d;
   font-size: 25px;
 }
 
@@ -341,7 +350,7 @@ section {
 
 .details-container i {
   font-size: 25px;
-  color: #E3651D;
+  color: #e3651d;
 }
 
 .details-container h3 {
@@ -349,7 +358,7 @@ section {
 }
 
 .details-container p {
-  color: #9DB2BF;
+  color: #9db2bf;
 }
 
 .section-container {
@@ -370,7 +379,7 @@ section {
 }
 
 .experience-sub-title {
-  color: #9DB2BF;
+  color: #9db2bf;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -464,9 +473,11 @@ article .icon {
   margin: 1rem;
 }
 
-.contact-icon-container p, a, i {
+.contact-icon-container p,
+a,
+i {
   font-weight: 600;
-  color: white
+  color: white;
 }
 
 .contact-info-container p {
@@ -492,4 +503,32 @@ footer p {
   text-align: center;
   font-weight: 600;
   font-size: 1.3rem;
+}
+
+@keyframes animaMarcador {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9ch;
+  }
+}
+
+@keyframes animaText {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+
+@keyframes remove-bar {
+  from {
+    border-color: gray;
+  }
+  to {
+    border-color: transparent;
+  }
 }
